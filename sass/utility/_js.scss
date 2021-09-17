@@ -1,0 +1,41 @@
+.fadein-up {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: .8s;
+}
+
+.fadein-right {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: 1s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.active {
+
+    &::after {
+        animation: reflection .6s forwards;
+    }
+}
+
+@keyframes reflection {
+
+    50%{
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+
+    51%{
+        transform-origin: right;
+    }
+    
+    100% {
+        transform-origin: right;
+        transform: scaleX(0);
+    }
+
+}

@@ -1,0 +1,15 @@
+.gnav {
+    &__nav {
+        display: flex;
+    }
+    
+    &__list {
+        padding: 0 18px;
+    }
+    
+    &__link {
+        text-decoration: none;
+        color: $text-color;
+        @include hover;
+    }
+}

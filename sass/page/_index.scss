@@ -1,0 +1,335 @@
+.wrapper {
+    background: $bg-color;
+    position: absolute;
+    z-index: -2;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes rotate {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.mv {
+    @include mb;
+    position: relative;
+
+    &__mv {
+        background: url(../images/background.jpg) center bottom / cover;
+        height: 100vh;
+        width: 100%;
+        opacity: 0;
+        animation: fadein 2s forwards 2s;
+        background-attachment: fixed;
+    }
+
+    &__txt {
+        position: absolute;
+        z-index: 2;
+        top: 16%;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        font-size: 224px;
+        font-weight: bold;
+        letter-spacing: 1rem;
+        line-height: 8rem;
+        color: $acc-color;
+        font-family: 'Cookie', cursive;
+        text-shadow:
+        2px 0 0 black,
+        0 2px 0 black,
+        -2px 0 0 black,
+        0 -2px 0 black;
+        animation: fadein 3s forwards;
+    }
+    
+    &__pic {
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        animation: fadein 3s forwards;
+    }
+    
+    &__img {
+        @include img;
+        object-position: bottom;
+    }
+    
+    &__lace {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        width: 30%;
+        transform: translateX(-50%);
+        animation: fadein 3s forwards;
+    }
+    
+    &__png {
+        @include img;
+        animation: rotate 60s forwards;
+    }
+}
+
+.sec2 {
+    @include width;
+    @include mb;
+
+    &__ttl {
+        @include sec-ttl;
+    }
+
+    &__wrap {
+        @include flex;
+        align-items: stretch;
+    }
+
+    &__unit {
+        @include flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    &__pic {
+        width: 440px;
+        height: 330px;
+        margin-bottom: 50px;
+        position: relative;
+        z-index: 2;
+        overflow: hidden;
+
+        &::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background: white;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: .7s;
+        }
+    }
+
+    &__img {
+        @include img;
+    }
+
+    &__bg {
+        background: $acc-color;
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 440px;
+        height: 330px;
+    }
+
+    &__sub {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    &__txt {
+        @include txt;
+        text-align: center;
+        width: 400px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: 8px 24px;
+        text-align: center;
+        border: 2px solid $acc-color;
+        border-radius: 16px;
+        text-decoration: none;
+        color: $acc-color;
+        transition: .4s;
+
+        &:hover {
+            background: $acc-color;
+            color: $bg-color;
+        }
+    }
+}
+
+.sec3 {
+    @include width;
+    @include mb;
+
+    &__ttl {
+        @include sec-ttl;
+    }
+
+    &__wrap {
+        @include flex;
+    }
+
+    &__unit {
+        @extend .sec2__unit;
+    }
+
+    &__pic {
+        @extend .sec2__pic;
+
+        &::before {
+            content: "★人気スポット";
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 14px;
+            background: rgb(226, 195, 58);
+            padding: 10px 18px;
+        }
+    }
+
+    &__img {
+        @include img;
+    }
+
+    &__bg {
+        @extend .sec2__bg;
+    }
+
+    &__sub {
+        @extend .sec2__sub;
+    }
+
+    &__txt {
+        @extend .sec2__txt;
+    }
+
+    &__link {
+        @extend .sec2__link;
+    }
+}
+
+.sec4 {
+    @include width;
+    @include mb;
+
+    &__ttl {
+        @include sec-ttl;
+    }
+
+    &__wrap {
+        @include flex;
+    }
+
+    &__pic {
+        width: 55%;
+        height: 520px;
+    }
+
+    &__img {
+        @include img;
+    }
+
+    &__unit {
+        @include flex;
+        align-items: start;
+        flex-direction: column;
+        width: 40%;
+    }
+
+    &__txt {
+        margin: 24px;
+        @include txt;
+    }
+}
+
+.sec5 {
+    @include width;
+    @include mb;
+
+    &__ttl {
+        @include sec-ttl;
+    }
+
+    &__wrap {
+        @include flex;
+        flex-direction: row-reverse;
+    }
+
+    &__pic {
+        @extend .sec4__pic;
+    }
+
+    &__img {
+        @include img;
+    }
+
+    &__unit {
+        @extend .sec4__unit;
+    }
+
+    &__txt {
+        @extend .sec4__txt;
+    }
+}
+
+.sec6 {
+    @include width;
+    @include mb;
+    @include flex;
+    background: url(../images/sec5.jpg) 20% center / cover;
+    height: 60vh;
+    width: 100%;
+
+    &__wrap {
+        background: #fff;
+        width: 60%;
+        margin: 0 10% 0 30%;
+        padding: 48px;
+    }
+
+    &__ttl {
+        @include sec-ttl;
+    }
+
+    &__img {
+        @include img;
+    }
+
+    &__txt {
+        @include txt;
+        margin-bottom: 48px;
+    }
+
+    &__button {
+        text-align: center;
+    }
+
+    &__link {
+        background: $foot-color;
+        padding: 12px 24px;
+        text-decoration: none;
+        color: #fff;
+        transition: .4s;
+
+        &:hover {
+            color: $foot-color;
+            background: #fff;
+            border: 2px solid $foot-color;
+            transition: .4s;
+        }
+    }
+}

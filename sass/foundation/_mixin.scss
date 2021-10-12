@@ -4,7 +4,7 @@
 }
 
 @mixin mb {
-    margin-bottom: 150px;
+    margin-bottom: 200px;
 }
 
 @mixin flex {
@@ -17,7 +17,7 @@
     font-size: 48px;
     text-align: center;
     letter-spacing: 3px;
-    margin-bottom: 50px;
+    margin-bottom: 68px;
     color: #fff;
     text-shadow:
     1px 0 0 black,
@@ -34,7 +34,6 @@
 
 @mixin txt {
     line-height: 1.3rem;
-    // letter-spacing: .1rem;
 }
 
 @mixin hover {

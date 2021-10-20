@@ -294,12 +294,25 @@
     @include width;
     @include mb;
 
+    &__container {
+        background: #fff;
+        width: 100%;
+        height: 780px;
+        margin: 0 auto;
+        @include flex;
+        justify-content: center;
+        flex-direction: column;
+        border: 1px solid #000;
+    }
+
     &__ttl {
         @include sec-ttl;
     }
 
     &__wrap {
         @include flex;
+        width: 90%;
+        margin: 0 auto;
     }
 
     &__pic {

@@ -4,6 +4,7 @@
     z-index: -2;
     line-height: 1.5rem;
     letter-spacing: 0.1rem;
+    font-family: 'Open Sans', sans-serif;
 }
 
 @keyframes fadein {
@@ -35,22 +36,20 @@
         background: url(../images/background.png) center bottom / cover;
         height: 100vh;
         width: 100%;
-        opacity: 0;
-        animation: fadein 2s forwards 2s;
         background-attachment: fixed;
     }
 
     &__txt {
         position: absolute;
         z-index: 2;
-        top: 16%;
+        top: 22%;
         left: 50%;
         transform: translateX(-50%);
         text-align: center;
-        font-size: 224px;
+        font-size: 15vw;
         font-weight: bold;
         letter-spacing: 1rem;
-        line-height: 8rem;
+        line-height: 10rem;
         color: $acc-color;
         font-family: 'Cookie', cursive;
         text-shadow:
@@ -101,7 +100,7 @@
 
     &__img {
         width: 100%;
-        height: 68vh;
+        height: 48vh;
         vertical-align: bottom;
         margin-left: 20%;
         object-fit: cover;
@@ -259,7 +258,7 @@
         @extend .sec2__pic;
 
         &::before {
-            content: "★人気スポット";
+            content: "★POPULAR";
             position: absolute;
             top: 0;
             left: 0;

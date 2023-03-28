@@ -91,65 +91,6 @@
     }
 }
 
-.sec1 {
-    width: 95%;
-    margin-bottom: 250px;
-    margin-left: 5%;
-    position: relative;
-    overflow: hidden;
-
-    &__img {
-        width: 100%;
-        height: 48vh;
-        vertical-align: bottom;
-        margin-left: 20%;
-        object-fit: cover;
-        opacity: .8;
-    }
-
-    &__ttlwhite,
-    &__ttlblack {
-        font-size: 15vw;
-        line-height: 18rem;
-        font-family: 'Eagle Lake', cursive;
-        font-weight: bold;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 2;
-        overflow: hidden;
-    }
-
-    &__ttlwhite {
-        width: 100%;
-        margin-left: 20%;
-        color: $bg-color;
-        left: -20%;
-    }
-
-    &__ttlblack {
-        width: 20%;
-    }
-
-    &__ttl {
-        &::nth-of-type(2) {
-            width: 500%;
-        }
-    }
-
-    &__txt {
-        position: absolute;
-        bottom: 10%;
-        right: 20px;
-        font-size: 6vw;
-        color: $acc-color;
-        font-weight: bold;
-        text-align: right;
-        font-family: 'Eagle Lake', cursive;
-    }
-}
-
 .sec2 {
     @include width;
     @include mb;
@@ -340,7 +281,8 @@
 
 .sec5 {
     @include width;
-    @include mb;
+    // @include mb;
+    margin-bottom: 40vh;
 
     &__ttl {
         @include sec-ttl;
